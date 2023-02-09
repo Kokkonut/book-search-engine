@@ -7,6 +7,7 @@ const typeDefs = gql`
         email: String
         password: String
         savedBooks: [Book]
+        bookCount: Int
     }
     
     type Book {
@@ -17,6 +18,12 @@ const typeDefs = gql`
         image: String
         link: String
     }
+
+    type Auth {
+        token: ID!
+        user: User
+    }
+    
     `;
 
 export default typeDefs;
